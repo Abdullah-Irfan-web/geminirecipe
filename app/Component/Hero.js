@@ -5,7 +5,7 @@ import pic from '../Component/breakfast.jpg'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 
-import { MdOutlineInsertPhoto,} from "react-icons/md"
+
 // API= 
 const Hero = () => {
   const router =useRouter();
@@ -142,7 +142,13 @@ const search=async()=>{
     <div className="flex flex-col justify-center">
         <div className='flex'>
    <h1 className='text-2xl mt-1'>Upload picture of your recipe</h1>
-   <MdOutlineInsertPhoto onClick={openWidget}  className='ml-4 cursor-pointer' size="40px"/>
+   <button 
+         onClick={openWidget} 
+          className="mt-2 ml-2 px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+       Upload
+        </button>
+   
    </div>
    {  imageId && <div className='mt-4 ml-4 '>
     <Image src={imageId} height={250} width={300}/>
